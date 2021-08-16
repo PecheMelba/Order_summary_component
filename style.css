@@ -1,0 +1,248 @@
+@font-face {
+    font-family: 'RedHatDisplayMedium';
+    src: url('fonts/RedHatDisplay-Medium.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'RedHatDisplayBold';
+    src: url('fonts/RedHatDisplay-Black.ttf') format('truetype');
+}
+html{height: 100%;}
+
+h1 { font-family: 'RedHatDisplayBold'; }
+p, a { font-family: 'RedHatDisplayMedium'; }
+
+body
+{
+    background: url("images/pattern-background-desktop.svg") no-repeat;
+    background-size: 100% 47%;
+    background-color: #e0e8ff;
+    
+    display: flex;
+    flex-direction: column;
+
+    position:absolute; top:0; bottom:0; right:0; left:0;
+
+    justify-content: center;
+    align-items:  center;
+}
+
+article
+{
+    width: 33%;
+    min-width: 400px;
+    height: 82%;
+    min-height: 600px;
+
+    background-color: white;
+    border-radius: 20px; 
+    box-shadow: 0px 15px 15px rgba(56, 42, 255, 0.1);
+
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    align-items: center;
+    text-align: center;
+
+    position: relative;
+}
+
+#hero_img
+{
+    width: 100%;
+    margin-bottom: 5%;
+}
+
+h1 
+{    
+    font-size: 2em;
+    font-weight: 900;
+    margin-bottom: 0px;
+    opacity: 0.9;
+}
+
+#summary_text
+{   
+    width: 70%;
+
+    color: pink;
+    color: #79809d;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 25px;
+}
+
+#order
+{
+    display: flex;
+
+    width: 65%;
+    height: 8%;
+
+    background-color:#f8f9fe;
+    border-radius: 20px; 
+
+    padding: 5%;
+
+    margin-bottom: 7%;
+}
+
+#order_details
+{
+    text-align: left;
+    align-self: center;
+}
+
+#music_logo_img
+{
+    width: 55px;
+    height: 55px;
+
+    align-self: center;
+    /* border: 1px solid rgb(0, 255, 42); */
+    margin-right: 5%;
+}
+
+#order_title
+{
+    color: black;
+    line-height: 10px;
+    font-weight: 900;
+}
+#order_price
+{
+    color: grey;
+    line-height: 10px;
+    font-weight: 500;
+}
+#change
+{
+    flex:2;
+    font-weight: 900;
+    color: #4e3fd0;
+
+    text-align: right;
+    align-self: center;
+}
+#checkout_btn
+{
+    background-color: #382ae1;
+    box-shadow: 0px 15px 15px rgba(56, 42, 255, 0.25);
+    border-radius: 13px;
+
+    width: 75%;
+    height: 7.5%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3%;
+}
+#checkout_btn p
+{
+    color:white;
+    font-weight: 700;
+}
+#cancel_link
+{
+    font-weight: 700;
+    color: grey;
+
+    text-decoration: none;
+    margin-bottom: 8%;
+}
+
+/* ============EVENTS ==================*/
+#change:hover
+{
+    text-decoration: none;
+}
+#checkout_btn:hover
+{
+    opacity: 0.7;
+}
+#cancel_link:hover
+{
+    color: black;
+}
+
+/* ========= CUSTOM CSSS ========= */
+.attribution
+{
+    display: none;
+}
+
+@media all and (min-height: 620px)
+{
+.attribution
+{
+    display: unset;
+    position: absolute; bottom: 0;}
+}
+
+@media all and (max-width: 500px)
+{
+    body
+    {
+        background: url("images/pattern-background-mobile.svg") no-repeat;
+        background-size: 100% 25%;
+        background-color: #e0e8ff;
+    }
+    article
+    {
+        width: 90%;
+        height: 82%;
+        min-width: 0px;
+        min-height: 550px;
+    }
+    #hero_img
+    {
+        margin-bottom: 10%;
+    }
+    h1
+    {
+        margin-bottom: 0px;
+        padding-bottom: 10px;
+        line-height: 0px;
+        font-size: 1.4em;
+        font-weight: 900;
+    }
+    #summary_text,#order_title, #order_price, #change, #checkout_btn, #cancel_link 
+    {
+        font-size: 0.9em;
+    }
+    #summary_text
+    {   
+        width: 75%;
+        margin-bottom: 7%;
+    }
+    #order
+    {
+        width: 77%;
+        height: 10%;
+        margin-bottom: 6%;
+    }
+    #music_logo_img
+    {
+        width: 20%;
+        height: 90%;
+    }
+    #checkout_btn
+    {   
+        width: 87%;
+        height: 8.7%;
+        margin-bottom: 0%;
+    }
+    #cancel_link
+    {
+        margin-top: 3%;
+        margin-bottom: 6%;
+    }
+    .attribution
+    {
+        font-size: 0.7em;
+    }
+}
